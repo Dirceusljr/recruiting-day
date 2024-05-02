@@ -52,6 +52,5 @@ export const routes = [
     path: '/home',
     pageComponent: Home,
     breadcrumb: [],
-    isPublic: true,
   },
 ]
