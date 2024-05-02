@@ -47,13 +47,13 @@ export const SignIn = () => {
   })
 
   useEffect(() => {
-    if (token) navigate('/dashboard')
+    if (token) navigate('/home')
   }, [token])
 
   useEffect(() => {
     if (!data) return
     setToken(data.token)
-    const from = location.state?.from?.pathname || '/dashboard'
+    const from = location.state?.from?.pathname || '/home'
     navigate(from, { replace: true })
   }, [data])
 
