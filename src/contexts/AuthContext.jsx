@@ -10,7 +10,7 @@ const AuthContext = createContext({
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(window.localStorage.getItem('auth:user'))
   const [user, setUser] = useState(null)
-  const { data, makeRequest, loading } = useApi(() => httpClient.get('/auth/me'))
+  const { data, makeRequest, loading } = useApi(() => httpClient?.get('/auth/me'))
 
   useEffect(() => {
     if (!token) {
